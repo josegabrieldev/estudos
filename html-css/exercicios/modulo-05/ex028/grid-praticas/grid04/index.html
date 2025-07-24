@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 04</title>
+    <style>
+        body {
+            background-color: darkslategrey;
+        }
+
+        div.container {
+            display: grid;
+            grid-template-rows: repeat(3, 90px);
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+        }
+
+        div.item1 {
+            background-color: rgb(49, 80, 49);
+            grid-area: 1 / 1 / 2 / 3;
+        }
+
+        div.item2 {
+            background-color: rgb(43, 29, 104);
+            grid-area: 2 / 1 / 4 / -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        body {
+            background-color: rgb(81, 130, 173);
+        }
+
+        div.container, div#container {
+            width: 80vw;
+            margin: 20px auto;
+        }
+        
+        div.container {
+            height: 600px;
+            border: 4px solid green;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto auto auto;
+            gap: 5px;
+            align-items: center;
+            justify-items: center;
+            align-content: space-around;
+            justify-content: space-evenly;
+        }
+
+        div#container {
+            height: 300px;
+            border: 4px solid #470455;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 5px;
+            align-items: center;
+            justify-items: normal;
+            align-content: space-evenly;
+            justify-content: space-around;
+        }
+
+        div.item {
+            text-align: center;
+            border: 2px solid blue;
+            padding: 10px;
+        }
+
+        div#item {
+            text-align: center;
+            border: 2px solid #e61c70;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+        <div class="item">N</div>
+        <div class="item">O</div>
+        <div class="item">P</div>
+        <div class="item">Q</div>
+        <div class="item">R</div>
+        <div class="item">S</div>
+        <div class="item">T</div>
+        <div class="item">U</div>
+        <div class="item">V</div>
+        <div class="item">W</div>
+        <div class="item">X</div>
+        <div class="item">Y</div>
+        <div class="item">Z</div>
+    </div>
+
+    <div id="container">
+        <div id="item">0</div>
+        <div id="item">1</div>
+        <div id="item">2</div>
+        <div id="item">3</div>
+        <div id="item">4</div>
+        <div id="item">5</div>
+        <div id="item">6</div>
+        <div id="item">7</div>
+        <div id="item">8</div>
+        <div id="item">9</div>
+    </div>
+</body>
+</html>
