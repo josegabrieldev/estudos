@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegando em Iframes</title>
+    <style>
+        body {
+            background-color: rgb(55, 94, 128);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        h2 {
+            color: rgb(28, 28, 128);
+            padding-left: 10px;
+        }
+        p {
+            text-align: justify;
+            text-indent: 25px;
+            line-height: 1.4em;
+        }
+        p.aviso {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.719);
+        }
+        a {
+            font-weight: bolder;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: rgba(30, 21, 109, 0.473);
+            text-decoration: underline;
+            padding: 3px;
+        }
+        a#cor1 {
+            color: rgb(0, 128, 0);
+        }
+        a#cor2 {
+            color: rgba(238, 130, 238, 0.705);
+        }
+        a#cor3 {
+            color: rgba(255, 255, 0, 0.767);
+        }
+        iframe {
+            width: 80vh;
+            height: 350px;
+            background-color: rgba(69, 119, 163, 0.63);
+            border: 2px solid rgba(0, 0, 0, 0.568);
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.192);
+        }
+    </style>
+</head>
+<body>
+    <h1>Navegando dentro de iframes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus reprehenderit molestiae dignissimos itaque voluptatem sequi iste cumque impedit accusamus, culpa numquam repellendus omnis provident laudantium nulla incidunt laborum autem quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at odit magni sed adipisci dolorum suscipit optio eligendi omnis nulla nobis atque, modi cupiditate aliquid quae quas similique voluptate? Voluptates.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aspernatur, sed quas quos repellendus quisquam blanditiis amet commodi minima maiores veritatis sapiente voluptates quis nam fuga labore reprehenderit? Tenetur, hic? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, consectetur nam quo inventore voluptatum deserunt libero dignissimos at laborum, necessitatibus odio reiciendis ducimus praesentium ad? Omnis fugiat at aperiam ex?</p>
+    <h2>Escolha uma página</h2>
+    <p class="aviso">Esconha uma das páginas a seguir para ser exibida na janela abaixo.</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag004.html" id="cor1" target="janela">Página Verde</a></li>
+        <li><a href="paginas-extras/pag005.html" id="cor2" target="janela">Página Violeta</a></li>
+        <li><a href="paginas-extras/pag006.html" id="cor3" target="janela">Página Amarela</a></li>
+    </ul>
+
+    <iframe src="paginas-extras/pag000.html" frameborder="1" name="janela">
+        <p>Infelismente seu navegador não é compativel com esse tipo de janela!</p>
+    </iframe>
+
+    <p class="aviso">Para mostrar o conteúdo padrão basta atualizar a página.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sint vero error necessitatibus eos quod quibusdam architecto similique, laboriosam nostrum rem delectus. Quasi sequi quidem, nesciunt sapiente unde pariatur minima? Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo omnis inventore doloremque nobis exercitationem voluptas voluptate! Nostrum commodi, aperiam, molestias vitae repudiandae officiis, vero quisquam optio aspernatur ipsum laborum!</p>
+</body>
+</html>
