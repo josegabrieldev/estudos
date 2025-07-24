@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.caixa {
+    background-color: rgb(26, 72, 112);
+    text-align: center;
+    border: 1px solid black;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 40px 1fr 25px;
+    grid-template-columns: 3fr 1fr;
+    gap: 5px;
+}
+
+#topo {
+    background-color: #5B134C;
+    grid-area: 1 / 1 / 2 / -1;
+}
+
+#menu {
+    background-color: #162700;
+    grid-area: 2 / 1 / 3 / -1;
+}
+
+#principal {
+    background-color: #220A21;
+    grid-area: 3 / 1 / -2 / -2;
+}
+
+#secundario {
+    background-color: #4E791A;
+    grid-area: 3 / 2 / -2 / -1;
+}
+
+#rodape {
+    background-color: #A8C415;
+    grid-area: 4 / 1 / -1 / -1;
+}
