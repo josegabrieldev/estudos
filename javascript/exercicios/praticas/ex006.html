@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 006</title>
+    <style>
+        body {
+            background-color: rgb(21, 73, 119);
+            color: rgb(0, 0, 0);
+            font: normal 20px arial;
+        }
+
+         input#iname {
+            width: 50%;
+            background-color: rgb(216, 208, 208);
+            text-align: center;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
+        input#botao {
+            background-color: #166d5e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        input#botao:hover {
+            background-color: #0c3530;
+        }
+
+        div {
+            width: 80%;
+            background-color: #311030cc;
+            color: white;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.315);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sexto Exercício</h1>
+    <p>Uma saudação dinâmica vou criar uma caixa para que o usuário possa colocar seu nome e ao aperta um botão vai aparecer uma saudação em uma caixa de resultado.</p>
+    <input type="text" name="name" id="iname"> 
+    <input type="button" value="Saudação" id="botao">
+    <div>Resultado</div>
+    
+    <script>
+        var nome = window.document.getElementById('iname')
+        var botao = window.document.getElementById('botao')
+        botao.addEventListener('click', clicar)
+        var res = window.document.querySelector('div')
+
+        function clicar() {
+            res.innerHTML = `Olá <strong>${nome.value}</strong>!`
+        }
+    </script>
+</body>
+</html>
