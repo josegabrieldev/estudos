@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Dados</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-size: 2.6em;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2em;
+            text-align: justify;
+            text-indent: 30px;
+            line-height: 1.8em;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        caption {
+            font-size: 1.7em;
+            font-weight: bold;
+            padding: 12px;
+        }
+        thead {
+            background-color: rgb(82, 80, 80);
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        tbody > tr:nth-child(even) {
+            background-color: rgba(95, 96, 97, 0.664);
+        }
+        div#container {
+            overflow: auto;
+        }
+        col {
+            background-color: rgb(184, 187, 190);
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela de Dados</h1>
+    <p>Está tabela é sobre dados de algumas pessoas para a minha prática de tabelas do curso de <strong>HTML e CSS</strong> espécificamente do cápitulo 21 (último cápitulo do Módulo 3). <br>
+    Enfim nesta tabela teremos os seguintes dados de certa pesssoa como; Nome, Idade, Gênero, Cidade e Estado, Time, Notas (nota 1, nota 2, nota 3 e nota4), Média, Resultado (Aprovado/Reprovado) Profissão e Horários (Entrada e Saída)</p>
+
+    <div id="container">
+        <table>
+
+            <colgroup>
+
+            <col span="14">
+
+        </colgroup>
+
+            <caption>Tabela de Dados</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2" scope="col">Nome</th>
+                    <th rowspan="2" scope="col">Idade</th>
+                    <th rowspan="2" scope="col">Gênero</th>
+                    <th rowspan="2" scope="col">Cidade</th>
+                    <th rowspan="2" scope="col">Estado</th>
+                    <th rowspan="2" scope="col">Time</th>
+                    <th colspan="4" scope="colgroup">Notas</th>
+                    <th rowspan="2" scope="col">Média</th>
+                    <th colspan="2" scope="colgroup">Resultado</th>
+                    <th rowspan="2" scope="col">Profissão</th>
+                </tr>
+                <tr>
+                    <th scope="col">Nota 1</th>
+                    <th scope="col">Nota 2</th>
+                    <th scope="col">Nota 3</th>
+                    <th scope="col">Nota 4</th>
+                    <th scope="col">Aprovado</th>
+                    <th scope="col">Reprovado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João Pedro Silva</td>
+                    <td>22 Anos</td>
+                    <td>Masculino</td>
+                    <td>São Paulo</td>
+                    <td><abbr title="São Paulo">SP</abbr></td>
+                    <td>Vasco</td>
+                    <td>8,5</td>
+                    <td>9,2</td>
+                    <td>8,8</td>
+                    <td>9,5</td>
+                    <td>9,0</td>
+                    <td colspan="2">Aprovado</td>
+                    <td>Desenvolvedor de Software</td>
+                </tr>
+                <tr>
+                    <td>Gabriel Oliveira Silva</td>
+                    <td>26 Anos</td>
+                    <td>Masculino</td>
+                    <td>Curitiba</td>
+                    <td><abbr title="Paraná">PR</abbr></td>
+                    <td>Coritiba</td>
+                    <td>6,5</td>
+                    <td>7,1</td>
+                    <td>6,8</td>
+                    <td>7,2</td>
+                    <td>6,9</td>
+                    <td colspan="2">Reprovado</td>
+                    <td>Estudante de Administração</td>
+                </tr>
+                <tr>
+                    <td>Beatriz Helena Ferreira</td>
+                    <td>21 Anos</td>
+                    <td>Feminino</td>
+                    <td>Recife</td>
+                    <td><abbr title="Pernanbuco">PE</abbr></td>
+                    <td>Sport</td>
+                    <td>8,5</td>
+                    <td>9,2</td>
+                    <td>8,8</td>
+                    <td>9,0</td>
+                    <td>8,8</td>
+                    <td colspan="2">Aprovada</td>
+                    <td>Engenheira de Software</td>
+                </tr>
+                <tr>
+                    <td>Maria Luiza Oliveira</td>
+                    <td>25 Anos</td>
+                    <td>Feminino</td>
+                    <td>Rio de Janeiro</td>
+                    <td><abbr title="Rio de Janeiro">RJ</abbr></td>
+                    <td>Flamengo</td>
+                    <td>9,1</td>
+                    <td>9,5</td>
+                    <td>8,9</td>
+                    <td>9,8</td>
+                    <td>9,3</td>
+                    <td colspan="2">Aprovado</td>
+                    <td>Médica</td>
+                </tr>
+                <tr>
+                    <td>Pedro Henrique Santos</td>
+                    <td>28 Anos</td>
+                    <td>Masculino</td>
+                    <td>Belo Horizonte</td>
+                    <td><abbr title="Minas Gerais">MG</abbr></td>
+                    <td>Atlético-MG</td>
+                    <td>8,2</td>
+                    <td>8,5</td>
+                    <td>9,1</td>
+                    <td>8,8</td>
+                    <td>8,6</td>
+                    <td colspan="2">Aprovado</td>
+                    <td>Engenheiro Civil</td>
+                </tr>
+                <tr>
+                    <td>Leticia Souza</td>
+                    <td>20 Anos</td>
+                    <td>Feminino</td>
+                    <td>Manaus</td>
+                    <td><abbr title="Amazonas">AM</abbr></td>
+                    <td>Nacional-AM</td>
+                    <td>6,2</td>
+                    <td>6,5</td>
+                    <td>6,5</td>
+                    <td>6,1</td>
+                    <td>6,4</td>
+                    <td colspan="2">Reprovada</td>
+                    <td>Estudante de Letras</td>
+                </tr>
+                <tr>
+                    <td>Rafael Vinicius Alves</td>
+                    <td>23 Anos</td>
+                    <td>Masculino</td>
+                    <td>Goiâna</td>
+                    <td><abbr title="Goiás">GO</abbr></td>
+                    <td>Goiás</td>
+                    <td>5,9</td>
+                    <td>6,2</td>
+                    <td>6,5</td>
+                    <td>6,8</td>
+                    <td>6,3</td>
+                    <td colspan="2">Reprovado</td>
+                    <td>Jornalista</td>
+                </tr>
+                <tr>
+                    <td>Ana Beatriz Lima</td>
+                    <td>20 Anos</td>
+                    <td>Feminino</td>
+                    <td>Salvador</td>
+                    <td><abbr title="Bahia">BA</abbr></td>
+                    <td>Bahia</td>
+                    <td>9,5</td>
+                    <td>9,2</td>
+                    <td>9,8</td>
+                    <td>9,1</td>
+                    <td>9,4</td>
+                    <td colspan="2">Aprovada</td>
+                    <td>Estudante de Direito</td>
+                </tr>
+                <tr>
+                    <td>Carlos Eduardo Souza</td>
+                    <td>29 Anos</td>
+                    <td>Masculino</td>
+                    <td>Campina Grande</td>
+                    <td><abbr title="Paraíba">PB</abbr></td>
+                    <td>Palmeiras</td>
+                    <td>8,8</td>
+                    <td>9,1</td>
+                    <td>8,5</td>
+                    <td>9,2</td>
+                    <td>8,9</td>
+                    <td colspan="2">Aprovado</td>
+                    <td>Contador</td>
+                </tr>
+                <tr>
+                    <td>Luana Gabriela Costa</td>
+                    <td>24 Anos</td>
+                    <td>Feminino</td>
+                    <td>João Pessoa</td>
+                    <td><abbr title="Paraíba">PB</abbr></td>
+                    <td>Palmeiras</td>
+                    <td>9,2</td>
+                    <td>8,9</td>
+                    <td>9,5</td>
+                    <td>9,1</td>
+                    <td>9,1</td>
+                    <td colspan="2">Aprovada</td>
+                    <td>Nutricionista</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

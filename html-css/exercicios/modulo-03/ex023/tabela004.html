@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            background-color: rgb(44, 88, 126);
+        }
+
+        h1, h2 {
+            color: rgba(255, 255, 255, 0.685);
+        }
+
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            border: 5px solid darkblue;
+        }
+
+        caption {
+            padding-bottom: 8px;
+            padding-left: 10px;
+            font-size: 1.2em;
+            text-align: left;
+        }
+
+        td {
+            border: 2px solid rgba(0, 0, 0, 0.829);
+            padding: 5px;
+        }
+        td.fontwheight {
+            background-color: rgba(89, 166, 233, 0.356);
+            color: wheat;
+            font-weight: bold;
+        }
+
+        td.bom {
+            background-color: rgba(125, 233, 125, 0.548);
+        }
+        td.maisomenos {
+            background-color: rgba(209, 141, 15, 0.651);
+        }
+        td.ruim {
+            background-color: rgba(207, 9, 9, 0.5);
+        }
+        td.preco {
+            background-color: rgba(112, 112, 230, 0.63);
+        }
+    </style>
+</head>
+<body>
+    <h1>Minhas Tabelas</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui excepturi, soluta saepe nisi vitae sed ipsa architecto temporibus porro veniam repudiandae beatae, optio aspernatur commodi, vel repellat nihil nam recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, porro nostrum! Corrupti, minima fugiat vel labore nobis quam ducimus, repellendus odio, doloribus nisi illo aspernatur tenetur molestias inventore. Non, corporis.</p>
+    <h2>Preços</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus commodi debitis perferendis repellendus quos animi deserunt eius nobis in blanditiis quas, cupiditate, maiores iusto fugit neque? Vitae commodi porro distinctio!</p>
+    <table>
+        <tr>
+            <td class="fontwheight">Leite</td>
+            <td class="preco">RS: 6,59</td>
+        </tr>
+        <tr>
+            <td class="fontwheight">Fubá</td>
+            <td class="preco">RS: 1,94</td>
+        </tr>
+        <tr>
+            <td class="fontwheight">Macarrão</td>
+            <td class="preco">RS: 2,19</td>
+        </tr>
+        <tr>
+            <td class="fontwheight">Sal</td>
+            <td class="preco">RS: 0,95</td>
+        </tr>
+    </table>
+    <h2>Notas</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem quasi ad inventore illo exercitationem id quae deserunt sint. Quo eligendi ullam totam molestias eum nisi ratione, fugit quod laudantium!</p>
+    <table>
+        <tr>
+            <td class="fontwheight">1 Semestre</td>
+            <td class="bom">Nota: 70</td>
+        </tr>
+        <tr>
+            <td class="fontwheight">2 Semestre</td>
+            <td class="ruim">Nota: 57</td>
+        </tr>
+        <tr>
+            <td class="fontwheight">3 Semestre</td>
+            <td class="bom">Nota: 92</td>
+        </tr>
+        <tr>
+            <td class="fontwheight">4 Semestre</td>
+            <td class="bom">Nota: 84</td>
+        </tr>
+    </table>
+    <h2>Classificação Libertadores</h2>
+    <table>
+        <caption>Grupo G</caption>
+        <tr>
+            <td class="fontwheight">Palmeiras</td>
+            <td class="bom">6 Pontos</td>
+        </tr>
+        <tr>
+            <td class="fontwheight">Bolivar</td>
+            <td class="maisomenos">3 Pontos</td>
+        </tr>
+        <tr>
+            <td class="fontwheight">Cerro Porteño</td>
+            <td class="maisomenos">3 Pontos</td>
+        </tr>
+        <tr>
+            <td class="fontwheight">Sporting Cristal</td>
+            <td class="ruim">0 Pontos</td>
+        </tr>
+    </table>
+</body>
+</html>
