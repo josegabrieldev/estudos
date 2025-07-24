@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Frutas</title>
+    <style>
+        body {
+            background-color: #008F8C;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            margin: 20px;
+        }
+
+        input#frt {
+            width: 100px;
+            background-color: #015958;
+            color: #ffffffb6;
+            padding: 6px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        input#botao {
+            display: block;
+            background-color: #065e5e;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+
+        div#msg {
+            max-width: 70%;
+            background-color: #023535;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin: 15px auto;
+            border-radius: 4px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.363);
+        }
+    </style>
+</head>
+<body>
+    <h1>Classificador de Frutas</h1>
+    <p>Vou pedir o nome de uma fruta ao usuário e dependendo da fruta vou lhe devolver uma mensagem. Lembrando que não terá todas as frutas aqui. Digite o nome da fruta em letras minúsculas.</p>
+
+    <p>Digite o nome da fruta: <input type="text" name="frt" id="frt"></p>
+    <input type="button" value="Ver Mensagem" id="botao" onclick="mensagem()">
+    <div id="msg">A mensagem será exibida aqui</div>
+
+    <script>
+        function mensagem() {
+            var men = window.document.querySelector('input#frt')
+            var msg = window.document.querySelector('div#msg')
+            var fruta = String(men.value)
+
+            switch (fruta) {
+                case 'banana':
+                    msg.innerHTML = 'Você é pratica, nutritiva e sempre pronta pra dar energia. Um clássico que nunca sai de moda!'
+                    break
+
+                case 'maçã':
+                    msg.innerHTML = 'Croque-me com confiança! Sou símbolo de saúde e sabedoria e ainda faço ótimas tortas.'
+                    break
+                case 'abacaxi':
+                    msg.innerHTML = 'Por fora espinhosa, por dentro doce. Quem me conhece sabe que sou puro sabor tropical!'
+                    break
+                case 'melancia':
+                    msg.innerHTML ='Sou a rainha do verão! Refrescante, suculenta e perfeita pra compartilhar.'
+                    break
+                case 'uva':
+                    msg.innerHTML = 'Pequena, mas poderosa. Sirvo como lanche. suco, vinho... e ainda sou cheia de antioxidantes!'
+                    break
+                case 'morango':
+                    msg.innerHTML = 'Sou doce com um toque ácido, como a vida. E combino com tudo: chocolate, chantilly ou só carinho.'
+                    break
+                case 'caju':
+                    msg.innerHTML = 'Exótico e brasileiro, com sabor que surpreende e uma castanha que vale ouro.'
+                    break
+                case 'goiaba':
+                    msg.innerHTML = 'Popular, versátil e cheia de vitamina C, A rainha das geleias.'
+                    break
+                case 'jaca':
+                    msg.innerHTML = 'Gigante, tropical e cheia de sabor, é uma festa em cada gomo.'
+                    break
+                case 'laranja':
+                    msg.innerHTML = 'Refrescante, cítrica e cheia de energia. O sol em forma de fruta.'
+                    break
+                case 'tamarindo':
+                    msg.innerHTML = 'Azedinho provocante, perfeito pra refrescos e aventuras gustativas.'
+                    break
+                default:
+                    msg.innerHTML = 'Infelismente a fruta que foi digitada não está nesse site. Se quiser pode entrar em contato pelo instagram <strong>@jgabrieltech</strong> e manda o nome da fruta e a mensagem que deseja adicionar.'
+                    break
+            }
+        }
+    </script>
+</body>
+</html>
