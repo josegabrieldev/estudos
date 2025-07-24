@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilos/d1style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <p>Ano de Nascimento: <input type="number" name="txtano" id="txtano" minlength="4" ></p>
+                <p>
+                    Sexo: 
+                    <input type="radio" name="radsex" id="fem" checked>
+                    <label for="fem">Feminino</label>
+                    <input type="radio" name="radsex" id="mas">
+                    <label for="mas">Masculino</label> 
+                </p>
+                <p>
+                    <input type="button" id="botao" value="Verificar" onclick="verificar()">
+                </p>
+            </div>
+            <div id="resultado">
+                Preencha os dados acima para ver o resultado!
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;José Gabriel!</p>
+    </footer>
+
+    <script src="d1script.js"></script>
+</body>
+</html>
