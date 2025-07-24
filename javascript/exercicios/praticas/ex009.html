@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <style>
+        @charset "UTF-8";
+
+body {
+            background-color: #D0D9B0;
+            font: normal 18px arial;
+        }
+
+        h1 {
+            color: #3F730A;
+            font-size: 2.3em;
+            margin-left: 12px;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.5em;
+        }
+
+        input#idade {
+            width: 30px;          
+            background-color: #2f3126;
+            color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        input#botao {
+            display: block;
+            background-color: #4c9720;
+            font-size: 1em;
+            padding: 5px;
+            margin: 20px auto;
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+
+        div#res {
+            background-color: #7DA626;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            margin: 20px 40px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+    <p>Vou pedir a idade ao usuário e criar um botão ao clicar no botão vai verificar se a idade digitada é menor que 18, se estiver entre 18 e 65, e acima de 65 anos e dar uma mensagem de resposta.</p>
+
+    Digite sua idade: <input type="number" name="idade" id="idade"> <br>
+    <input type="button" value="Verificar" id="botao" onclick="verificador()">
+    <div id="res"></div>
+
+    <script>
+        function verificador() {
+            var num = window.document.querySelector('input#idade')
+            var res = window.document.querySelector('div#res')
+            var idade = Number(num.value)
+
+            if (idade <= 10) {
+                res.innerHTML = `Você ainda é criança!`
+            } else if (idade < 18) {
+                res.innerHTML = 'Você ainda é Menor de idade!'
+            } else if (idade <= 65) {
+                res.innerHTML = 'Você já é Adulto!'
+            } else {
+                res.innerHTML = 'Você chegou na idade Idosa!'
+            }
+        }
+    </script>
+</body>
+</html>
