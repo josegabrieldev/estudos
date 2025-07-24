@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexivel">
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudio em HTML5.</p>
+    <audio controls autoplay>
+        <source src="midia/80v-vampire-carchase-sircubworth.mp3" type="">
+    </audio>
+    <audio src="midia/80v-vampire-carchase-sircubworth.mp3" controls></audio>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+    </audio>
+    <p>Infelismente o seu navegador não consegue reproduzir áudio. <br> <a href="midia/guanacast-33.mp3" target="_blank">Clique aqui para baixar o arquivo mp3 podcast</a> <br> <a href="midia/80v-vampire-carchase-sircubworth.mp3" target="_blank">Clique aqui para baixar o arquivo mp3 música</a></p>
+</body>
+</html>
