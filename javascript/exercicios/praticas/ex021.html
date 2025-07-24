@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma dos Números</title>
+    <style>
+        body {
+            background-color: #270844;
+            color: white;
+            padding: 12px;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.5em;
+        }
+
+        input#num {
+            width: 50px;
+            background-color: lightblue;
+            padding: 4px;
+            border: 1px solid black;
+        }
+
+        input#botao {
+            display: block;
+            background-color: #659d2c;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px;
+            margin: auto;
+        }
+
+        div#res {
+            width: 200px;
+            background-color: white;
+            color: rgb(10, 12, 149);
+            text-align: center;
+            padding: 12px;
+            margin: 15px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soma dos Números</h1>
+    <p>Ao aperta um botão vai soma todos os números de 1 até um determinado número,Vou permitir que o usuário digite esse número.</p>
+    <p>Digite o Número: <input type="number" name="num" id="num"></p>
+    <input type="button" value="Somar" id="botao" onclick="somar()">
+    <div id="res">Resultado da soma!</div>
+
+    <script>
+        function somar() {
+            var num = window.document.getElementById('num')
+            var res = window.document.getElementById('res')
+            var n = Number(num.value)
+            var soma = 0
+            for (var s = 1; s <= n; s++) {
+                soma += s
+            }
+            res.innerHTML = `A soma de 1 até ${n} é ${soma}`
+        }
+    </script>
+</body>
+</html>
