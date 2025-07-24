@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de votação</title>
+    <style>
+        body {
+            background-color: #5f4cee;
+            font: normal 18px arial;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.3em;
+            margin: 20px;
+        }
+
+        p {
+            text-align: justify;
+            margin: 10px;
+        }
+
+        input#num {
+            width: 40px;
+            background-color: rgba(0, 0, 0, 0.781);
+            color: rgba(255, 255, 255, 0.76);
+            padding: 3px;
+        }
+
+        input#botao {
+            display: block;
+            background-color: #1f175c;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 7px;
+            margin: auto;
+            border-radius: 5px;
+        }
+
+        div#res {
+            max-width: 600px;
+            background-color: #201a53;
+            color: rgba(255, 255, 255, 0.76);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 3px;
+            box-shadow: 2px 2px 4px #09023b77;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Votação</h1>
+    <p>Vou pedir a idade do usuário e com base nessa idade vou dar uma resposta ao usuário de se pode ou não votar. Regras com base na Lei do Brasil.</p>
+
+    <p>Digite a sua idade: <input type="number" name="num" id="num"></p>
+    <p><input type="button" value="Averiguar" id="botao" onclick="averiguar()"></p>
+    <div id="res">Resposta</div>
+
+    <script>
+        function averiguar() {
+            var num = window.document.querySelector('input#num')
+            var res = window.document.querySelector('div#res')
+            var idade = Number(num.value)
+
+            if (idade < 16) {
+                res.innerHTML = 'Você ainda não atingiu a idade para realizar seu voto. <br>'
+                res.innerHTML += 'Você é Menor de Idade!'
+            } else if (idade < 18 || idade > 65) {
+                res.innerHTML = 'Seu voto é Opcional.'
+            } else {
+                res.innerHTML = 'Seu voto é OBRIGATORIO!'
+            }
+        }
+    </script>
+</body>
+</html>
