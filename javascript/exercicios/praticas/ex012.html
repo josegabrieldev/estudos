@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Multas</title>
+    <style>
+* {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(13, 51, 85);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            max-width: 700px;
+            background-color: white;
+            padding: 12px;
+            margin: 15px auto;
+            border-radius: 5px;
+            box-shadow: 2px 3px 5px #00000059;
+        }
+
+        main > h1 {
+            background-image: linear-gradient(to right, #C4EEF2, transparent);
+            color: #025159;
+            padding: 8px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        main > p {
+            text-align: justify;
+            font-size: 17px;
+            line-height: 1.3em;
+        }
+
+        main input#num {
+            width: 70px;
+            background-color: #3E848C;
+            color: white;
+            padding: 5px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        main input#botao {
+            display: block;
+            background-color: #9edce2;
+            font-size: 16px;
+            padding: 5px 10px;
+            margin: 12px auto;
+            border: 1px solid black;
+        }
+
+        main input#botao:active {
+            background-color: #025159;
+            color: white;
+        }
+
+        main > div#res {
+            background-color: #025159;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            margin: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculadora de Multas</h1>
+        <p>Vou pedir a velocidade do carro ao usuário e se a velocidade for maior que 80km/h vai ser mostrado uma multa com um valor a paga de 5 reais a cada km ultrapassado acima do limite.</p>
+        <p>Digite a velocidade do seu veículo: <input type="number" name="num" id="num">km/h</p>
+        <input type="button" id="botao" value="Verificar" onclick="verificar()">
+        <div id="res">Resultado</div>
+    </main>
+
+    <script>
+        function verificar() {
+            var num = window.document.getElementById('num')
+            var res = window.document.getElementById('res')
+            var vel = Number(num.value)
+            
+            if (vel > 80) {
+                var multa = (vel - 80) * 5 
+                    res.innerHTML = `Você foi <strong>MULTADO</strong> por exceder o limite de velocidade permitido. <br> Valor da multa R$${multa.toFixed(2)} reais.`
+            } else {
+                res.innerHTML = 'Você esta dentro do limite de velocidade permitido. <br> Dirija sempre com segurança!'
+            }
+        }
+    </script>
+</body>
+</html>
