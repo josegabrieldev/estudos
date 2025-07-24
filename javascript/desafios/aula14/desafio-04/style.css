@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3b55a8;
+    font: normal 16px arial;
+    padding: 18px;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+main {
+    max-width: 500px;
+    background-color: white;
+    padding: 15px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px #00000044;
+}
+
+div {
+    margin: 15px;
+}
+
+div > p {
+    display: inline;
+    margin: 20px;
+}
+
+p > input#num {
+    width: 100px;
+    background-color: lightgray;
+    padding: 3px;
+}
+
+div > input#botao {
+    background-color: #1a1a87;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+}
+
+div > select#tabuada {
+    display: block;
+    background-color: lightgray;
+    padding: 10px;
+    margin: auto;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
