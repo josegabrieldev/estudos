@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <style>
+        body {
+            background-color: #817DB8;
+            font: normal 20px arial;
+        }
+
+        input#pais {
+            background-color: lightgray;
+            border: none;
+            border-radius: 2px;
+        }
+
+        input#pais:focus {
+            background-color: rgb(36, 35, 35);
+            color: white;
+        }
+
+        input#botao {
+            background-color: #6A1238;
+            color: white;
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 6px;
+        }
+
+        div#res {
+            background-color: #183f29;
+            color: #d8e6d4;
+            text-align: center;
+            line-height: 40px;
+            margin: 12px 30px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seleção de País</h1>
+
+    Em que país você mora: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" id="botao" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var pais = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var pais = String(pais.value)
+
+            if (pais == 'Brasil') {
+                res.innerHTML = `Você é Brasileiro`
+            } else {
+                res.innerHTML = `Você é Estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
