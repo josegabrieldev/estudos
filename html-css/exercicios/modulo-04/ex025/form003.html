@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Formulário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        div {
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque accusantium pariatur debitis natus voluptate dolorem excepturi repellendus ad veritatis iure, nam repudiandae totam molestiae temporibus eius expedita ut praesentium reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum minima laborum quasi placeat ipsa odio dicta ducimus hic eos ipsum? Accusamus vitae quasi assumenda blanditiis repudiandae temporibus eum optio quisquam!</p>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome" required minlength="4" maxlength="25" autocomplete="name">
+        </div>
+        <div>
+            <label for="isobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="isobrenome" minlength="4" maxlength="25" autocomplete="name">
+        </div>
+        <div>
+            <label for="iidade">Idade: </label>
+            <input type="number" name="idade" id="iidade" required minlength="1" maxlength="2">
+        </div>
+        <div>
+            <label for="iemail">Email: </label>
+            <input type="email" name="email" id="iemail" required autocomplete="email">
+        </div>
+        <div>
+            <label for="idata">Data: </label>
+            <input type="date" name="data" id="idata">
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit numquam quis, eligendi incidunt ab debitis voluptatem excepturi placeat sapiente, delectus enim commodi eius esse natus! Saepe autem illo itaque aliquid. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti sunt facere, libero illum ullam, quo, pariatur debitis quas ut corporis soluta commodi expedita ex nihil reprehenderit repudiandae. Odio, nulla voluptatum.</p>
+</body>
+</html>

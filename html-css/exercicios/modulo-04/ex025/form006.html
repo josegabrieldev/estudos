@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightslategray;
+        }
+
+        main {
+            width: 600px;
+            background-color: white;
+            margin: auto;
+            padding: 20px 10px;
+            border-radius: 4px;
+            box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.24);
+        }
+
+        fieldset {
+            border: 2px solid rgba(0, 0, 0, 0.671);
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 1.3em;
+        }
+
+        div {
+            margin: 5px;
+        }
+
+        div#botoes {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Formulários</h1>
+    <main>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Dados Iníciais</legend>
+
+                    <div>
+                        <label for="inome">Nome</label>
+                        <input type="text" name="nome" id="inome" required minlength="4" maxlength="35" placeholder="Nome Completo" autocomplete="name">
+                    </div>
+
+                    <div>
+                        <label for="iusu">Usuário</label>
+                        <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" placeholder="Nome de Usuário" autocomplete="username">
+                    </div>
+
+                    <div>
+                        <label for="icep">CEP</label>
+                        <input type="number" name="cep" id="icep" required placeholder="xxxxx-xxx">
+                    </div>
+
+                    <div>
+                        <label for="icel">Celular</label>
+                        <input type="number" name="cel" id="icel" required placeholder="+xx (xx) xxxxx-xxxx">
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+
+                    <div>
+                        <label for="iemail">Email</label>
+                        <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="Digite seu Email">
+                    </div>
+
+                    <div>
+                        <label for="isenha">Senha</label>
+                        <input type="password" name="senha" id="isenha" required placeholder="Digite sua Senha">
+                    </div>
+
+                    <div>
+                        <label for="ihora">Horário</label>
+                        <input type="time" name="hora" id="ihora" required>
+                    </div>
+
+                    <div>
+                        <label for="idata">Data</label>
+                        <input type="date" name="data" id="idata" required>
+                    </div>
+
+                </fieldset>
+                <div id="botoes">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+    </main>
+</body>
+</html>
