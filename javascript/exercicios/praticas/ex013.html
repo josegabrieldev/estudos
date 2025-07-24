@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Horário</title>
+    <style>
+        body {
+            background-color: rgb(43, 66, 87);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            margin: 20px;
+        }
+
+        input#num {
+            width: 30px;
+            background-color: lightseagreen;
+            padding: 5px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        input#botao {
+            display: block;
+            background-color: white;
+            color: black;
+            font-size: 1em;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid rgb(19, 19, 104);
+        }
+
+        div#res {
+            max-width: 400px;
+            background-color: rgb(13, 54, 54);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin: 15px auto;
+            border-radius: 4px;
+            box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.26);
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Horário para período do dia</h1>
+    <p>Vou pedir a hora atual ao usuário e vou desenvolver uma mensagem indicando se é Madrugada, Dia. Tarde ou Noite.</p>
+
+    <p>Digite o hórario do dia atual: <input type="number" name="num" id="num"></p>
+    <input type="button" value="Averiguar" id="botao" onclick="averiguar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function averiguar() {
+            var num = window.document.getElementById('num')
+            var res = window.document.getElementById('res')
+            var hora = Number(num.value)
+
+            if (hora < 6) {
+                res.innerHTML = `São ${hora} Horas da Madrugada!`
+            } else if (hora < 11) {
+                res.innerHTML = `São ${hora} Horas da Manhã!`
+            } else if (hora <= 17) {
+                res.innerHTML = `São ${hora} Horas da Tarde!`
+            } else {
+                res.innerHTML = `São ${hora} Horas da Noite!`
+            }
+        }
+    </script>
+</body>
+</html>
