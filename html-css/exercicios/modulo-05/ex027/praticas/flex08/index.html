@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            background-color: darkgreen;
+        }
+
+        main {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        div {
+            background-color: rgb(2, 70, 2);
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        div#caixa1 {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Evitar encolhimento</h1>
+    <main>
+        <div id="caixa1"></div>
+        <div></div>
+        <div></div>
+    </main>
+</body>
+</html>

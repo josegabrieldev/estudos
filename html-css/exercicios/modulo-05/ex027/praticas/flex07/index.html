@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            background-color: rgb(21, 73, 105);
+        }
+
+        main {
+            display: flex;
+        }
+
+        div {
+            background-color: rgb(12, 12, 206);
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        div#caixa1 {
+            flex-grow: 4;
+        }
+
+        div#caixa2 {
+            flex-grow: 2;
+        }
+
+        div#caixa3 {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crescimento Proporcional</h1>
+    <main>
+        <div id="caixa1"></div>
+        <div id="caixa2"></div>
+        <div id="caixa3"></div>
+    </main>
+</body>
+</html>

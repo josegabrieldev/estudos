@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            background-color: rgb(41, 82, 82);
+        }
+
+        div#conteiner {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        div.item {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(43, 4, 80);
+            color: rgba(255, 255, 255, 0.719);
+            font-size: 18px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quebrando Linhas</h1>
+
+    <div id="conteiner">
+
+        <div class="item">Caixa 01</div>
+        <div class="item">Caixa 02</div>
+        <div class="item">Caixa 03</div>
+        <div class="item">Caixa 04</div>
+        <div class="item">Caixa 05</div>
+        <div class="item">Caixa 06</div>
+        <div class="item">Caixa 07</div>
+        <div class="item">Caixa 08</div>
+        <div class="item">Caixa 09</div>
+
+    </div>
+</body>
+</html>

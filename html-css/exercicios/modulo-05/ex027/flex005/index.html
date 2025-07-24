@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox centralização</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightseagreen;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            background-color: lightgreen;
+            width: 90vw;
+            height: 90vh;
+            margin: auto;
+            margin-top: 25px;
+            border-radius: 10px;
+            box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.363);
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            background-color: green;
+            max-width: 400px;
+            height: 330px;
+            box-shadow: 1px 1px 5px #00000071;
+        }
+
+        section > h1 {
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            padding: 15px 0px;
+        }
+
+        section > p {
+            text-indent: 28px;
+            text-align: justify;
+            line-height: 1.3em;
+            padding: 0px 12px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Tela de login</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quibusdam sunt eos? Perferendis repellendus consequuntur nostrum! Maxime doloremque, repellendus itaque ex harum cumque, perspiciatis, quo nisi voluptate accusamus facilis blanditiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab est iusto dolores molestiae facere? Aliquid saepe aspernatur id, asperiores illo.</p>
+        </section>
+    </main>
+</body>
+</html>

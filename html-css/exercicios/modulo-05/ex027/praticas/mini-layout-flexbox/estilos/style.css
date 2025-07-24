@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+* {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #254a61;
+        }
+
+        header {
+            height: 120px;
+            background-image: linear-gradient(to bottom, #4C428C,#2E2D59);
+            text-align: center;
+        }
+
+        header > h1 {
+            color: #74BF60;
+            padding: 10px;
+        }
+
+        header > p {
+            font-size: 14px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            max-width: 700px;
+            width: 100%;
+            background-color: white;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.342);
+        }
+
+        nav {
+            width: 120px;
+            background-color: #0C1C26;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav > a {
+            display: block;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+
+        nav > a:hover {
+            color: #E6F28D;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+        }
+
+        nav > a:focus {
+            text-decoration: underline;
+            outline: 2px dashed #74BF60;
+            transition: all 0.3s ease;
+        }
+
+        section {
+            flex-grow: 1;
+            padding: 12px;
+        }
+
+        section > h1, h2 {
+            color: #27521b;
+            padding: 15px;
+        }
+
+        section > p {
+            text-align: justify;
+            text-indent: 28px;
+        }
+
+        footer {
+            height: 30px;
+            background-color: #12181b;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        footer > p {
+            color: white;
+            font-size: 12px;
+        }
+
+        footer > p > a {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+                }
+
+        footer > p > a:hover {
+            color: #74BF60;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+        }
+
+        footer > p > a:focus {
+            text-decoration: underline;
+            outline: 2px dashed #E6F28D;
+            transition: all 0.3s ease;
+        }

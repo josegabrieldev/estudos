@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        body {
+            background-color: rgb(49, 76, 100);
+            font-size: 18px;
+        }
+
+        div#container {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(28, 44, 58);
+            height: 400px;
+        }
+
+        div.item {
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        div#caixa1 {
+            background-color: rgb(10, 10, 105);
+        }
+
+        div#caixa2 {
+            background-color: rgb(50, 50, 209);
+        }
+
+        div#caixa3 {
+            background-color: rgb(39, 3, 138);
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando flexbox</h1>
+
+    <div id="container">
+
+        <div class="item" id="caixa1">Caixa 01</div>
+        <div class="item" id="caixa2">Caixa 02</div>
+        <div class="item" id="caixa3">Caixa 03</div>
+
+    </div>
+</body>
+</html>

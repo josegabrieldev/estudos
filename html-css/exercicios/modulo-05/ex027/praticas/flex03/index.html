@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-color: rgba(14, 4, 68, 0.753);
+            font-size: 20px;
+        }
+
+        header {
+            height: 120px;
+            background-image: linear-gradient(to top, #0a0c8dad, rgb(14, 84, 131));
+            text-align: center;
+        }
+        
+        nav#container {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Menu Horizontal Centralizado</h1>
+        <nav id="container">
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contatos</a>
+            <a href="#">Serviços</a>
+            <a href="#">Ajuda</a>
+        </nav>
+    </header>
+</body>
+</html>
