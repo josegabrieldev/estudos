@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/*Todas as demais mídias*/
+
+@media print {
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main {
+        border: 2px solid black;
+        border-radius: 7px;
+    }
+
+    main h1 {
+        color: black;
+        text-shadow: none;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: block; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url(../imagens/back-phone.jpg);
+    }
+
+    img#phone { display: block; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) { /* versão para tablet*/
+
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: block; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1280px) { /* versão para laptop*/
+
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) { /* versão para desktop*/
+
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+}
+ 
+@media screen and (min-width: 1441px) { /* versão para tv..*/
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 600px;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: block; }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Resposnsivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Meu Portifólio Pessoal</h1>
+        <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">Menu</span>
+        <menu id="opcoes">
+            <ul>
+                <li> <a href="#">Início</a> </li>
+                <li> <a href="#">Sobre Mim</a> </li>
+                <li> <a href="#">Projetos</a> </li>
+                <li> <a href="#">Habilidades</a> </li>
+                <li> <a href="#">Blog</a> </li>
+                <li> <a href="#">Contato</a> </li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>Testando Media Query</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero distinctio praesentium sunt dolorem recusandae cupiditate laborum, explicabo nisi beatae quasi aperiam earum possimus adipisci consequuntur, dolore voluptates mollitia similique quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate et, sunt non facilis nihil cum debitis possimus alias laudantium tempore, dolorem cupiditate corporis praesentium itaque, voluptates iure. Iusto, officiis fuga.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci soluta ea veniam quasi architecto. Enim unde numquam, vel nostrum in, quo tenetur aliquid consequatur neque laboriosam optio nulla deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eos, voluptatem nostrum corrupti sapiente aperiam repudiandae explicabo eum recusandae animi impedit facilis labore perferendis dolorum suscipit laboriosam delectus officiis nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, modi ipsam. Aliquam laboriosam saepe ratione eligendi expedita sit quia cum nemo odio quo debitis sequi culpa veritatis, corrupti asperiores distinctio!</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, dicta sint nemo quasi rerum corporis assumenda impedit ullam voluptatum recusandae suscipit doloremque commodi molestiae, possimus ex qui soluta deserunt nostrum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis aspernatur repellat assumenda quisquam cupiditate recusandae, temporibus aliquid eos fugit. Sit aspernatur dignissimos neque impedit asperiores dolorem, corrupti officiis voluptatibus nisi!</p>
+        </article>
+    </main>
+
+    <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                opcoes.style.display = 'block'
+            } else {
+                opcoes.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (opcoes.style.display == 'block') {
+                opcoes.style.display = 'none'
+            } else {
+                opcoes.style.display = 'block'
+            }
+        }
+
+    </script>
+</body>
+</html>
