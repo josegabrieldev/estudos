@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 008</title>
+    <style>
+body {
+        background-color: #08677a;
+        font: normal 20px arial;
+        text-align: justify;
+        margin: 10px 30px;
+}
+
+h1 {
+        color: lightgreen;
+}
+
+input.num {
+        width: 50px;
+        height: 15px;
+        background-color: #2c2f31;
+        color: white;
+        padding: 5px;
+        border: none;
+        border-radius: 2px;
+}
+
+input.botoes {
+        color: white;
+        font-size: 16px;
+        padding: 5px;
+}
+
+input#botao1 {
+        background-color: #005952;
+}
+
+input#botao2 {
+        background-color: #001859;
+}
+
+input#botao3 {
+        background-color: #591c00;
+}
+
+input#botao4 {
+        background-color: #2e0059;
+}
+
+div#resultado {
+        height: 10%;
+        background-color: #0522a2;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin: 20px auto;
+        border: 1px solid #9c2525;
+        border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <h1>Oitavo Exercício</h1>
+    <p>Calculadora simples, vou criar duas caixas para digitar números e ums botões de somar, subtrair, de divisão e multiplicação e o resultado vai aparecer em uma div personalizada</p>
+
+    <input type="number" name="num1" id="inum1" class="num">
+    <input type="number" name="num2" id="inum2" class="num">
+    <input type="button" value="Somar" class="botoes" id="botao1" onclick="somar()">
+    <input type="button" value="Subtrair" class="botoes" id="botao2" onclick="subtracao()">
+    <input type="button" value="Divisão" class="botoes" id="botao3" onclick="divisao()">
+    <input type="button" value="Multiplicar" class="botoes" id="botao4" onclick="multiplicacao()">
+
+    <div id="resultado">Resultado da operação aparecera aqui</div>
+
+    <script>
+        var n1 = window.document.getElementById('inum1')
+        var n2 = window.document.getElementById('inum2')
+        var res = window.document.getElementById('resultado')
+
+        function somar() {
+            num1 = Number(n1.value)
+            num2 = Number(n2.value)
+            var resultado = num1 + num2
+            res.innerHTML = `A soma entre ${num1} e ${num2} é ${resultado}`
+        }
+
+        function subtracao() {
+            num1 = Number(n1.value)
+            num2 = Number(n2.value)
+            var resultado = num1 - num2
+            res.innerHTML = `A subtração entre ${num1} e ${num2} é ${resultado}`
+        }
+
+        function divisao() {
+            num1 = Number(n1.value)
+            num2 = Number(n2.value)
+            var resultado = num1 / num2
+            res.innerHTML = `A divisão entre ${num1} e ${num2} é ${resultado}`
+        }
+
+        function multiplicacao() {
+            num1 = Number(n1.value)
+            num2 = Number(n2.value)
+            var resultado = num1 * num2
+            res.innerHTML = `A multiplicação entre ${num1} e ${num2} é ${resultado}`
+        }
+    </script>
+</body>
+</html>
