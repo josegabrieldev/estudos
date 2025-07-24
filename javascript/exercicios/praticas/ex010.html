@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou ímpar?</title>
+
+    <style>
+        body {
+            background-color: rgb(94, 117, 138);
+            font: normal 18px arial;
+        }
+
+        input#num {
+            width: 50px;
+            background-color: rgb(102, 179, 179);
+            padding: 5px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        input#botao {
+            background-color: rgb(19, 19, 131);
+            color: white;
+            font-size: 16px;
+            padding: 5px;
+            margin-left: 12px;
+            border: 1px solid black;
+        }
+
+        div#res {
+            background-color: rgb(11, 52, 88);
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>O número é Par ou Ímpar?</h1>
+    <p>Vou pedir um número ao usuário e verificar se o número é par ou ímpar.</p>
+
+    Digite o número: <input type="number" name="num" id="num">
+    <input type="button" value="Verificar" id="botao" onclick="verificar()">
+    <div id="res">resultado</div>
+
+    <script>
+        function verificar() {
+            var n1 = window.document.querySelector('input#num')
+            var res = window.document.querySelector('div#res')
+            var num = Number(n1.value)
+
+            if (num % 2 === 0) {
+            res.innerHTML = `O número ${num} é par.`
+            } else {
+            res.innerHTML = `O número ${num} é ímpar.`
+            }
+        }
+    </script>
+</body>
+</html>
