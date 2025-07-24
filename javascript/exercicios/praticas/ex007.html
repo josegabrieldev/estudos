@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 007</title>
+    <style>
+        body {
+            background-color: #06312a;
+            color: white;
+            font: normal 20px arial;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #3345A6;
+            color: #EDF25E;
+            text-align: center;
+            line-height: 100px;
+            margin: auto;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Setimo Exercício</h1>
+    <p>Vou criar uma div que vai mudar de cor quando eu clicar, quando eu entrar e sair com o mouse.</p>
+
+    <div>Intereja...</div>
+
+    <script>
+        var interaja = window.document.querySelector('div')
+        interaja.addEventListener('mouseenter', entrar)
+        interaja.addEventListener('click', clicar)
+        interaja.addEventListener('mouseout', sair)
+
+        function entrar() {
+            interaja.style.background = '#FFC745'
+            interaja.style.color = 'blue'
+        }
+
+        function clicar() {
+            interaja.style.background = '#E60400a7'
+            interaja.style.color = 'white'
+        }
+
+        function sair() {
+            interaja.style.background = '#4EF249'
+            interaja.style.color = 'darkblue'
+        }
+    </script>
+</body>
+</html>
