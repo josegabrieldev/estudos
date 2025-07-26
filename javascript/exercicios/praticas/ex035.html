@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Função</title>
+    <style>
+        body {
+            background-image: radial-gradient(circle farthest-corner at 78% 70%, #D2ACF7 0%, #8015E8 36.0321044921875%, #0035AA 75.677490234375%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 12px;
+        }
+
+        h1 {
+            color: #95D600;
+            text-align: center;
+            text-shadow: 3px 3px 4px #0000006e;
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 28px;
+            line-height: 1.3em;
+        }
+
+        button#botao {
+            display: block;
+            background-color: #017101;
+            color: white;
+            font-size: 15px;
+            padding: 5px;
+            margin: 15px auto;
+            border: 1px solid #000000a8;
+            border-radius: 6px;
+        }
+
+        div#res {
+            background-color: #d3d3d3bd;
+            text-align: center;
+            padding: 10px;
+            margin: 15px auto;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px #0000003f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de função</h1>
+    <p>Vou criar um botão para chama uma função atraves desse botão aqui do HTML. <br> A função vai conta quantos dias falta para o Natal.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque obcaecati, vero ut laudantium modi optio distinctio odit ratione aperiam illo fugiat velit suscipit magni dolore, repellendus laborum. Saepe, laborum ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti veritatis corporis explicabo pariatur nobis illo nihil aperiam facere mollitia. Distinctio quis consequatur eius tempore quia corrupti ratione eum asperiores? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi vero praesentium nesciunt eos alias soluta dolore, aut, vel consequuntur ducimus quia minima veritatis magnam? Quas, sit quod. Eligendi, laboriosam nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae expedita voluptatum sit doloribus fugiat ad, saepe esse necessitatibus porro officiis iste rem ut minima velit sint ab, ea reprehenderit!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt accusamus nam delectus maiores deserunt. Magnam obcaecati tempora culpa fugit, at commodi itaque dolores quam aut magni, dolorem autem nisi nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at similique in modi accusantium consequatur maiores quos eaque. Obcaecati quam ipsa incidunt. Velit saepe, dolores accusantium voluptatibus quam facilis iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed perspiciatis magnam officiis rerum dignissimos libero in, qui labore excepturi quidem? Obcaecati tempore ea quibusdam! Iusto asperiores magni provident commodi similique!</p>
+    <button id="botao" onclick="DiasparaoNatal()">Faltão quantos dias para o Natal</button>
+
+    <div id="res">Faltam...</div>
+
+    <script>
+        
+        function DiasparaoNatal() {
+            let hoje = new Date()
+            let natal = new Date(hoje.getFullYear(), 11, 25)
+            let res = window.document.getElementById('res')
+
+            if (hoje > natal) {
+                natal = new Date(hoje.getFullYear() + 1, 11, 25)
+            }
+
+            let dif = natal - hoje
+            let diasRestantes = Math.ceil(dif / (1000 * 60 * 60 * 24))
+            res.innerHTML = `Faltam exatamente ${diasRestantes} dias para o Natal!`
+        }
+    </script>
+</body>
+</html>
