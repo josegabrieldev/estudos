@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem com dados</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #e0f7fa, #ffe0f7);
+        color: #333;
+        padding: 30px;
+        margin: 0px;
+    }
+
+    h1 {
+        color: #4a148c;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        padding: 10px;
+        width: 250px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        transition: border-color 0.3s;
+        font-size: 14px;
+    }
+
+    input:focus {
+        border-color: #6a1b9a;
+        outline: none;
+    }
+
+    #botao {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #6a1b9a;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #botao:hover {
+        background-color: #8e24aa;
+    }
+
+    #res {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f3e5f5;
+        border: 1px dashed #8e24aa;
+        border-radius: 12px;
+        font-size: 18px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>Mensagem personalizada</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus quas cupiditate, facilis consequatur sunt exercitationem natus cumque fugit ullam eum ad, dolorum atque pariatur ab nam consectetur assumenda repellendus nobis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo est dignissimos cumque mollitia quibusdam iste, sit aperiam dolore fugit exercitationem perspiciatis numquam voluptatibus sapiente nisi quae tempora labore dolores. Itaque.</p>
+    <p>Vou pedir ao usuário um nome, a idade e sua profissão, e quando clicar no botão "Exibir" vai aparecer uma mensagem.</p>
+
+    <p>Nome: <input type="text" name="txtnome" id="txtnome" required></p>
+    <p>Idade: <input type="number" name="txtidade" id="txtidade" required></p>
+    <p>Profissão: <input type="text" name="txtprofissao" id="txtprofissao" required></p>
+
+    <button id="botao" onclick="apresentar()">Apresentar</button>
+
+    <div id="res">A apresentação ira aparecer aqui</div>
+
+    <script>
+        function apresentar() {
+            var nome = window.document.querySelector('input#txtnome').value
+            var idade = window.document.querySelector('input#txtidade').value
+            var profissao = window.document.querySelector('input#txtprofissao').value
+            var res = window.document.querySelector('div#res')
+
+            if (!nome || !idade || !profissao) {
+                window.alert('Por Favor! Digite os dados corretamente.')
+            } else {
+                res.innerHTML = `Muito prazer eu sou <strong>${nome}</strong>, tenho <strong>${idade}</strong> anos e trabalho como <strong>${profissao}</strong>.`
+            }
+        }
+    </script>
+</body>
+</html>
