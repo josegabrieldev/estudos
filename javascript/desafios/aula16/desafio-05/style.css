@@ -18,25 +18,80 @@ header {
 }
 
 main {
-    max-width: 500px;
-    background-color: white;
-    padding: 15px;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 5px 5px 10px #00000044;
+    max-width: 600px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    padding: 40px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.267);
+}
+
+section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: 50%;
+    font-size: 1em;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input[type="button"] {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    padding: 10px 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3;
+}
+
+input[type="button"]:focus {
+    background-color: #2980b9;
 }
 
 main select {
-    display: block;
-    width: 200px;
-    background-color: #ccc;
+    max-height: 250px;
+    background-color: #bbbaba;
+    text-align: center;
+    font-size: 1em;
     padding: 10px;
-    margin: 20px;
+    border: 1px solid #5f5f5faf;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+div#res {
+    background-color: #eaf2fb;
+    color: #2c3e50;
+    padding: 8px;
+    margin-top: 24px;
+    border-radius: 8px;
 }
 
 footer {
-    color: white;
     text-align: center;
     font-weight: bold;
     font-style: italic;
+    margin-top: 25px;
+}
+
+footer > p {
+    color: white;
 }
