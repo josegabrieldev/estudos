@@ -8,23 +8,18 @@
 </head>
 <body>
    <main class="container">
-        <h1>Bem vinda minha princesa</h1>
-        <p>Antes de clicar no botão minha flor Saiba você é especial e muito importante pra mim nunca duvide disso.</p>
+        <h1>Bem Vindo!</h1>
+        <p>Vamos personalizar sua saudação usando JavaScript!</p>
         <div class="saudacao" id="mensagemSaudacao"></div>
-        <button onclick="mudarNome()">Abelhinha</button>
+        <button onclick="mudarNome()">Personalizar Saudação</button>
    </main>
-
-   <footer>
-        <p>Assinatura: <strong>José Gabriel da Silva</strong> &#x1F422; &#x1F618;</p>
-   </footer>
 
    <script>
     function mudarNome() {
         let nome = window.prompt('Me fale seu Nome? Por Gentileza!')
         let mensagem = window.document.getElementById('mensagemSaudacao')
-        mensagem.innerHTML += `Olá ${nome} Muito Prazer! <br> Sabia que eu te amo muito meu amor, que você é uma mulher maravilhosa e incrivel que cada dia eu me apaixono ainda mais por ti, por essa pessoa por essa voz por esse seu jeito único de ser e que me fez te amar tanto. TE AMO MUITO MINHA ${nome} vc é dms mesmo`
-        mensagem.innerHTML += `Te amo e te quero hoje, quero amanhã bem mais do que te quiz ontem. To com muita saudade de você minha pretinha chatinha!`
-        mensagem.style.lineHeight = '1.6em'
+        mensagem.innerHTML += `Olá ${nome} Muito Prazer!`
+        mensagem.style.lineHeight = '1.3em'
     }
    </script>
 
