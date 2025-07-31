@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="estilos/style2.css">
+</head>
+<body>
+   <main class="container">
+        <h1>Boas Vindas!</h1>
+        <p>Vamos personalizar sua saudação usando JavaScript!</p>
+        <div class="saudacao" id="mensagemSaudacao">Olá, Visitante!</div>
+        <button onclick="mudarNome()">Personalizar Saudação</button>
+   </main>
+
+   <script>
+    function mudarNome() {
+        let nome = window.prompt('Me fale seu Nome? Por Gentileza!')
+        let mensagem = window.document.getElementById('mensagemSaudacao')
+        mensagem.innerHTML = `Olá ${nome} Muito Prazer!`
+    }
+   </script>
+
+</body>
+</html>
