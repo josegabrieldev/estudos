@@ -52,9 +52,9 @@ button:hover {
 }
 
 footer  {
-    height: 60px;
     background-color: #754f4d;
     color: black;
+    font-size: 10px;
     font-weight: bold;
     padding: 5px;
     margin-bottom: 15px;
