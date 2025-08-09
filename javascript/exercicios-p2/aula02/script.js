@@ -10,7 +10,7 @@ function adicionarTarefas() {
     } else {
         // ao adicionar tarefa exibe essa mensagem
         mensagem.innerHTML = 'Tarefa adicionada com sucesso!'
-        mensagem.style.color = '#28A745'
+        mensagem.style.color = '#186129ff'
 
         // Criando um item (li) e inseri na lista (ul)
         let listaTarefas = window.document.getElementById('listaTarefas')
